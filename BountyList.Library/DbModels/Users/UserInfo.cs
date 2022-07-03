@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace BountyList.Library.DbModel.Users
+namespace BountyList.Library.DbModels.Users
 {
     public class UserInfo
     {

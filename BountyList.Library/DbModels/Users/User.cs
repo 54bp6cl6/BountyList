@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace BountyList.Library.DbModel.Users
+namespace BountyList.Library.DbModels.Users
 {
     public class User
     {
@@ -8,13 +8,13 @@ namespace BountyList.Library.DbModel.Users
 
         [Required]
         [MinLength(1), MaxLength(50)]
-        public string Username { get; set; }
+        public string Username { get; set; } = null!;
 
-        [MaxLength(50)]
-        public string PasswordHash { get; set; }
+        [MaxLength(256)]
+        public string? PasswordHash { get; set; }
 
         [EmailAddress]
         [MaxLength(50)]
-        public string Email { get; set; }
+        public string? Email { get; set; }
     }
 }
