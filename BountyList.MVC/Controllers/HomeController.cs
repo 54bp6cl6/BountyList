@@ -1,4 +1,4 @@
-﻿using BountyList.MVC.Models;
+﻿using BountyList.MVC.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 

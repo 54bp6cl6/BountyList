@@ -22,15 +22,19 @@ namespace BountyList.MVC.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("BountyList.Library.DbModels.Users.User", b =>
+            modelBuilder.Entity("BountyList.Library.DbModels.Accounts.Account", b =>
                 {
-                    b.Property<Guid>("UserId")
+                    b.Property<Guid>("AccountId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Email")
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("Nickname")
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
 
                     b.Property<string>("PasswordHash")
                         .HasMaxLength(256)
@@ -41,25 +45,9 @@ namespace BountyList.MVC.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.HasKey("UserId");
+                    b.HasKey("AccountId");
 
-                    b.ToTable("Users");
-                });
-
-            modelBuilder.Entity("BountyList.Library.DbModels.Users.UserInfo", b =>
-                {
-                    b.Property<Guid>("UserId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("NickName")
-                        .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
-
-                    b.HasKey("UserId");
-
-                    b.ToTable("UserInfos");
+                    b.ToTable("Accounts");
                 });
 #pragma warning restore 612, 618
         }

@@ -1,0 +1,30 @@
+﻿<section>
+    <div class="card">
+        <div class="card-header">
+            <h1>註冊</h1>
+        </div>
+        <div class="card-body">
+            <form>
+                <div class="mb-3">
+                    <label for="username" class="form-label required">帳號</label>
+                    <input type="text" class="form-control" name="account">
+                </div>
+                <div>
+                    <label for="password" class="form-label required">密碼</label>
+                    <input type="password" class="form-control" name="password">
+                </div>
+                <div>
+                    <label for="nickname" class="form-label">暱稱</label>
+                    <input type="text" class="form-control" name="nickname">
+                </div>
+            </form>
+        </div>
+        <div class="card-footer">
+            <button onclick="submit()">註冊</button>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <script src="/js/account/sign_up.js"></script>
+}

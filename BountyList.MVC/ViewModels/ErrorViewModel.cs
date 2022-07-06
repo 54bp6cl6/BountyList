@@ -1,4 +1,4 @@
-namespace BountyList.MVC.Models
+namespace BountyList.MVC.ViewModels
 {
     public class ErrorViewModel
     {

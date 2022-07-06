@@ -1,10 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace BountyList.Library.DbModels.Users
+namespace BountyList.Library.DbModels.Accounts
 {
-    public class User
+    public class Account
     {
-        public Guid UserId { get; set; }
+        public Guid AccountId { get; set; }
 
         [Required]
         [MinLength(1), MaxLength(50)]
@@ -16,5 +16,8 @@ namespace BountyList.Library.DbModels.Users
         [EmailAddress]
         [MaxLength(50)]
         public string? Email { get; set; }
+
+        [MaxLength(30)]
+        public string? Nickname { get; set; }
     }
 }
